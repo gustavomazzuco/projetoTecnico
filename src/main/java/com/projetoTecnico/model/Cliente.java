@@ -11,8 +11,8 @@ public class Cliente extends AbstractEntity{
     private String nome;
     private String cnpj_cpf;
 
-    @OneToMany
-    private List<Endereco> enderecos;
+    /*@OneToMany
+    private List<Endereco> enderecos;*/
 
     public String getNome() {
         return nome;

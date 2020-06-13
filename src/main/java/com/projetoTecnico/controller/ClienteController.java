@@ -8,9 +8,9 @@ import com.projetoTecnico.repository.EnderecoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -21,8 +21,8 @@ public class ClienteController {
     private ClienteRepository clienteDAO;
 
     @GetMapping(path = "/lista")
-    public ResponseEntity<?> listAll(){
-        return new ResponseEntity<>(clienteDAO.findAll(), HttpStatus.OK);
+    public List<Cliente> listAll(){
+        return this.clienteDAO.findAll();
     }
 
     @GetMapping(path = "/{id}")
