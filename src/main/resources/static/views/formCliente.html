@@ -1,0 +1,19 @@
+<div ng-controller="ClienteController as controller">
+    <h5>{{controller.usuario}}</h5>
+
+    <div style="border: 1px solid black;">
+        <label for="clienteId">Id: </label>
+        <input type="number" id="clienteId" ng-model="controller.cliente.id" disabled><br>
+
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" ng-model="controller.cliente.nome">
+        <br>
+        <label for="nome">CPF/CNPJ: </label>
+        <input type="text" id="cnpj_cpf" ng-model="controller.cliente.cnpj_cpf">
+
+
+        <button type="button" ng-click="controller.salvar()">Salvar</button>
+        <button type="button" ng-click="controller.cliente = undefined">Cancelar</button>
+    </div>
+
+</div>

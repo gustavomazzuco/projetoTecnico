@@ -1,0 +1,23 @@
+<div ng-controller="ClienteController as controller">
+    <div style="border: 1px solid black;">
+        <button type="button" ng-click="controller.novo()">Novo Cliente</button>
+        <br>
+        <table border="1">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>CPF/CNPJ</th>
+                <th>Opções</th>
+            </tr>
+            <tr ng-repeat="cliente in controller.clientes">
+                <td>{{cliente.id}}</td>
+                <td>{{cliente.nome}}</td>
+                <td>{{cliente.cnpj_cpf}}</td>
+                <td>
+                    <button type="button" ng-click="controller.alterar(cliente)">Alterar</button>
+                    <button type="button" ng-click="controller.deletar(cliente)">Deletar</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
