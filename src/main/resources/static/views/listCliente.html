@@ -2,21 +2,57 @@
     <div class="container" ng-show="controller.cliente">
         <h4 style="text-align:center; margin-top: 20px;">Cadastro de Cliente</h4>
 
-            <div class="form-group">
-                <label for="clienteId">Id: </label>
-                <input type="number" class="form-control" id="clienteId" ng-model="controller.cliente.id" disabled>
-            </div>
-            <div class="form-group">
-                <label for="nome">Nome: </label>
-                <input type="text" class="form-control" id="nome" ng-model="controller.cliente.nome" required>
-            </div>
-            <div class="form-group">
-                <label for="nome">CPF/CNPJ: </label>
-                <input type="text" class="form-control" id="cnpj_cpf" ng-model="controller.cliente.cnpj_cpf" required>
-            </div>
+        <div class="form-group">
+            <label for="clienteId">Id: </label>
+            <input type="number" class="form-control" id="clienteId" ng-model="controller.cliente.id" disabled>
+        </div>
+        <div class="form-group">
+            <label for="nome">Nome: </label>
+            <input type="text" class="form-control" id="nome" ng-model="controller.cliente.nome" required="required">
+        </div>
+        <div class="form-group">
+            <label for="cnpj_cpf">CPF/CNPJ: </label>
+            <input type="text" class="form-control cpfOuCnpj" id="cnpj_cpf" ng-model="controller.cliente.cnpj_cpf"
+                   required="required">
+        </div>
+        <div class="form-group">
+            <label for="telefone">Telefone: </label>
+            <input type="text" class="form-control telefone" id="telefone" ng-model="controller.cliente.telefone"
+                   required="required">
+        </div>
+        <div class="form-group">
+            <label for="cep">CEP: </label>
+            <input type="text" class="form-control cep" id="cep" ng-model="controller.cliente.cep"
+                   required="required">
+        </div>
+        <div class="form-group">
+            <label for="rua">Rua: </label>
+            <input type="text" class="form-control" id="rua" ng-model="controller.cliente.rua"
+                   required="required">
+        </div>
+        <div class="form-group">
+            <label for="numero">Numero: </label>
+            <input type="number" class="form-control" id="numero" ng-model="controller.cliente.numero"
+                   required="required">
+        </div>
+        <div class="form-group">
+            <label for="bairro">Bairro: </label>
+            <input type="text" class="form-control" id="bairro" ng-model="controller.cliente.bairro"
+                   required="required">
+        </div>
+        <div class="form-group">
+            <label for="cidade">Cidade: </label>
+            <input type="text" class="form-control" id="cidade" ng-model="controller.cliente.cidade"
+                   required="required">
+        </div>
+        <div class="form-group">
+            <label for="estado">Estado: </label>
+            <input type="text" class="form-control" id="estado" ng-model="controller.cliente.estado"
+                   required="required">
+        </div>
 
-            <button type="button" class="btn btn-success" ng-click="controller.salvar()">Salvar</button>
-            <button type="button" class="btn btn-danger" ng-click="controller.cliente = undefined">Cancelar</button>
+        <button type="submit" class="btn btn-success" ng-click="controller.salvar()">Salvar</button>
+        <button type="button" class="btn btn-danger" ng-click="controller.cliente = undefined">Cancelar</button>
 
     </div>
 
